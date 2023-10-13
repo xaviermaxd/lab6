@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App6.MainPage">
+
+    <StackLayout>
+        <!--<ListView x:Name="lvEstudiantes"> </ListView>-->
+        <!--<ListView>
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Hugo</x:String>
+                    <x:String>Paco</x:String>
+                    <x:String>Luis</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+        </ListView>-->
+        <!--<ListView x:Name="lvEstudiantes1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal"
+                                     Spacing="50"
+                                     BackgroundColor="Green">
+                            <Label Text="{Binding Nombres}" 
+                                   TextColor="White"
+                                   FontSize="Medium"
+                                   />
+                            <Label Text="{Binding Apellidos}"
+                                   TextColor="White"
+                                   FontSize="Medium"
+                                   />
+                            <Label Text="{Binding Edad}"
+                                   FontSize="Large"
+                                   TextColor="Red"/>
+                            <Label Text="{Binding Seccion}"
+                                   FontSize="Large"
+                                   TextColor="Red"/>
+                            <Image Source="{Binding ImagenPath}"></Image>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>-->
+        <ListView x:Name="lvEstudiantes1">
+            <ListView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="LightGray">
+                            <Label Text="{Binding Key}" FontSize="Large" TextColor="Black" />
+                        </StackLayout>Alumno
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.GroupHeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Spacing="50" BackgroundColor="Green">
+                            <Label Text="{Binding Nombres}" TextColor="White" FontSize="Medium" />
+                            <Label Text="{Binding Apellidos}" TextColor="White" FontSize="Medium" />
+                            <Label Text="{Binding Edad}" FontSize="Large" TextColor="Red" />
+                            <Label Text="{Binding Seccion}" FontSize="Large" TextColor="Red" />
+                            <!--<Image Source="{Binding ImagenPath}" />-->
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
